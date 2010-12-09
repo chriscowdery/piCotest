@@ -1,0 +1,21 @@
+piCotest 0.1
+
+About
+-----
+piCotest is inspired from of minuint (http://www.jera.com/techinfo/jtns/jtn002.html) in so far as that it's easy to include in existing projects without installing libraries.
+Above all else, it's designed to be lightweight and simple.
+
+Usage
+-----
+1. Create an empty C file
+2. #include "picotest.c"
+3. Create a void * test method (e.g. void *testOne() { ... } )
+4. Inside the method, use TEST_ASSERT("String Description here", truthExpressionToEvaluateHere);
+5. In your main method, use the addTestMethod to add your test to the suite (e.g. addTest(testOne);)
+6. When done adding tests, invoke executeTestSuite();
+
+Coming Soon
+-----------
+1. setUp and tearDowns for tests
+2. Resetting after each test
+3. Dynamically expanding the number of tests
