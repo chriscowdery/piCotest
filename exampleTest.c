@@ -1,4 +1,4 @@
-#include "picotest.c"
+#include "picotest.h"
 
 void *test_two_equals_one()
 {
@@ -15,6 +15,7 @@ void *test_one_plus_one()
 
 int main(int ac, char **av)
 {
+	initializePicotest();
 	addTest(test_two_equals_one);
 	addTest(test_one_plus_one);
 	
