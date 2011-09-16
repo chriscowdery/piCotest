@@ -1,4 +1,4 @@
-piCotest 0.1
+piCotest 0.2
 
 About
 -----
@@ -8,11 +8,11 @@ Above all else, it's designed to be lightweight and simple.
 Usage
 -----
 1. Create an empty C file
-2. #include "picotest.c"
+2. #include "picotest.h"
 3. Create a void * test method (e.g. void *testOne() { ... } )
-4. Inside the method, use TEST_ASSERT("String Description here", truthExpressionToEvaluateHere);
-5. In your main method, use the addTestMethod to add your test to the suite (e.g. addTest(testOne);)
-6. When done adding tests, invoke executeTestSuite();
+5. Inside the method, use TEST_ASSERT("String Description here", truthExpressionToEvaluateHere);
+6. In your main method, invoke initializePicotest() and then use the addTestMethod to add your test to the suite (e.g. addTest(testOne);)
+7. When done adding tests, invoke executeTestSuite();
 
 Coming Soon
 -----------
